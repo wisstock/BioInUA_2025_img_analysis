@@ -32,5 +32,6 @@ def background_correction(input_img:np.ndarray,
     corr_img = corr_img.clip(min=0)
     return corr_img.astype(input_img.dtype)
 
+
 if __name__ == "__main__":
     print("This is a module template.")

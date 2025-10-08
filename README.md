@@ -226,11 +226,7 @@ python -m pip install "napari[all]"
     ├── src/                       # загальна директорія із вихідним кодом пакету
     │   └── package_template/      # директорія із модулями пакету
     │       ├── __init__.py        # службовий файл директорії
-    │       ├── module.py          # код модуля у складі пакету
-    │       │
-    │       └── sub_package/       # піддиректорія пакету
-    │           ├── __init__.py        # службовий файл директорії
-    │           └── sub_module.py      # код підмодуля у складі пакету
+    │       └── module.py          # код модуля у складі пакету
     │
     ├── pyproject.toml        # конфігураційний файл
     ├── README.md             # файл опису
@@ -282,6 +278,9 @@ python -m pip install -e .
 - [Scientific Volume Imaging](https://svi.nl/Huygens-Imaging-Academy)
 - [Introduction to Modeling for Neuroscience](https://dabane-ghassan.github.io/ModNeuro/)
 - [Convolutions in image processing, YouTube](https://www.youtube.com/watch?v=8rrHTtUzyZA)
+- [Python for Data Science](https://aeturrell.github.io/python4DS/welcome.html)
+- [R for Data Science](https://r4ds.hadley.nz/)
+
 
 ## Література
 

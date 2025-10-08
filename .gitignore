@@ -1,6 +1,7 @@
 # Docs and devs
 .diff/
 *.csv
+course_data/*.tif
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
