@@ -2,6 +2,7 @@
 .diff/
 *.csv
 course_data/*.tif
+course_data/*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
