@@ -1,6 +1,8 @@
 # Docs and devs
 .diff/
 *.csv
+
+# Demo data analysis results
 course_data/*.tif
 course_data/*.tiff
 course_data/*.csv
