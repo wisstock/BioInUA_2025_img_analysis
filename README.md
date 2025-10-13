@@ -274,12 +274,15 @@ python -m pip install -e .
 - [Scikit-image examples](https://scikit-image.org/docs/stable/auto_examples/index.html)
 - [Image processing learning resorces](https://homepages.inf.ed.ac.uk/rbf/HIPR2/hipr_top.htm)
 - [Analyzing fluorescence microscopy images with ImageJ](https://petebankhead.gitbooks.io/imagej-intro/content/)
+- [Introduction to Bioimage Analysis by Dr. Pete Bankhead](https://bioimagebook.github.io/)
 - [The Carl Zeiss Microscopy Online Campus](https://zeiss-campus.magnet.fsu.edu/index.html)
+- [MicroscopyU from Nikon](https://www.microscopyu.com/)
 - [Scientific Volume Imaging](https://svi.nl/Huygens-Imaging-Academy)
 - [Introduction to Modeling for Neuroscience](https://dabane-ghassan.github.io/ModNeuro/)
 - [Convolutions in image processing, YouTube](https://www.youtube.com/watch?v=8rrHTtUzyZA)
 - [Python for Data Science](https://aeturrell.github.io/python4DS/welcome.html)
 - [R for Data Science](https://r4ds.hadley.nz/)
+- [Thorlabs Optical Microscopy Course](https://www.thorlabs.com/newgrouppage9.cfm?objectgroup_id=11630#ad-image-0)
 
 
 ## Література
