@@ -1,6 +1,6 @@
 # опис пакету
 [project]
-name = "plugin-template"
+name = "package_template"
 version = "0.0.1"
 authors = [
   {name = "Borys Olifirov", email = "omnia.faty@gmail.com"}
@@ -21,7 +21,6 @@ dependencies = [
 # класифікатори Python Package Index (PyPI)
 classifiers=[
     'Development Status :: 3 - Alpha',  # 4 - Beta, 5 - Production/Stable
-    'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3.8',
     'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
