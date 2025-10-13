@@ -1,3 +1,61 @@
+[project]
+name = "plugin-template"
+version = "0.0.1"
+authors = [
+  {name = "Borys Olifirov", email = "omnia.faty@gmail.com"}
+]
+description = "plugin-template: empty napari plugin for Bioinformatics for Ukraine course"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = "MIT"
+license-files = ["LICENSE"]
+
+# мінімальна версія Python
+requires-python = ">= 3.10"
+
+# залежності, які будуть встановлені разом з пакетом
+dependencies = [
+    "napari",
+    "dipy",
+    "numba",
+    "pybaselines"
+]
+
+# класифікатори Python Package Index (PyPI)
+classifiers = [
+    "Framework :: napari",
+
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Operating System :: OS Independent",
+
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Image Processing",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+    "Topic :: Utilities"
+]
+
+[project.urls]
+Homepage = "https://github.com/wisstock/BioInUA_2025_img_analysis"
+Documentation = "https://github.com/wisstock/BioInUA_2025_img_analysis"
+Repository = "https://github.com/wisstock/BioInUA_2025_img_analysis"
+Issues = "https://github.com/wisstock/BioInUA_2025_img_analysis/issues"
+
+# інформація для системи збірки пакету
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yaml"]
+
+[project.entry-points."napari.manifest"]
+domb-napari = "plugin_template:napari.yaml"

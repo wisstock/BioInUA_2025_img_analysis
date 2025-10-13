@@ -1,8 +1,6 @@
 package-template
 ================
-_Biological Data Science Summer School, 7-20 July 2024, Uzhhorod, Ukraine._
-
-package-template: python package template for BDS^3 2024
+*_Bioinformatics for Ukraine course, 6-24 October 2025, Kyiv, Ukraine._*
 
 Based on official [Python Packaging User Guide](https://packaging.python.org/en/latest/)
 
@@ -20,7 +18,7 @@ package-template/
 ```
 
 ### Dependency
-- python >= 3.9
+- python >= 3.10
 - numpy
 
 ### Local installation in editable mode with `pip`:

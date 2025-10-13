@@ -1,19 +1,24 @@
+# опис пакету
 [project]
-name = "package-template"
-description = "package-template: empty python package for Bioinformatics for Ukraine workshop"
-
+name = "plugin-template"
 version = "0.0.1"
-authors = [{name = "Borys Olifirov", email = "omnia.fatum@gmail.com"}]
+authors = [
+  {name = "Borys Olifirov", email = "omnia.faty@gmail.com"}
+]
+description = "package-template: empty python package for Bioinformatics for Ukraine course"
+readme = {file = "README.md", content-type = "text/markdown"}
+license = "MIT"
+license-files = ["LICENSE"]
 
-readme = "README.md"
-license = {file = "LICENSE"}
+# мінімальна версія Python
+requires-python = ">=3.10"
 
-requires-python = ">=3.8"
-
+# залежності, які будуть встановлені разом з пакетом
 dependencies = [
     "numpy"
 ]
 
+# класифікатори Python Package Index (PyPI)
 classifiers=[
     'Development Status :: 3 - Alpha',  # 4 - Beta, 5 - Production/Stable
     'License :: OSI Approved :: MIT License',
@@ -29,9 +34,12 @@ classifiers=[
 ]
 
 [project.urls]
-Documentation = "https://github.com/wisstock/BDS3_2024_img_analysis"
-Repository = "https://github.com/wisstock/BDS3_2024_img_analysis"
+Homepage = "https://github.com/wisstock/BioInUA_2025_img_analysis"
+Documentation = "https://github.com/wisstock/BioInUA_2025_img_analysis"
+Repository = "https://github.com/wisstock/BioInUA_2025_img_analysis"
+Issues = "https://github.com/wisstock/BioInUA_2025_img_analysis/issues"
 
+# система збірки пакету
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
