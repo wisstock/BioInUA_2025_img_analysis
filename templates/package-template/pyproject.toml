@@ -1,11 +1,11 @@
 # опис пакету
 [project]
-name = "package_template"
+name = "package-template"
 version = "0.0.1"
 authors = [
   {name = "Borys Olifirov", email = "omnia.faty@gmail.com"}
 ]
-description = "package-template: empty python package for Bioinformatics for Ukraine course"
+description = "python package ecample for Bioinformatics for Ukraine course"
 readme = {file = "README.md", content-type = "text/markdown"}
 license = "MIT"
 license-files = ["LICENSE"]
@@ -21,11 +21,10 @@ dependencies = [
 # класифікатори Python Package Index (PyPI)
 classifiers=[
     'Development Status :: 3 - Alpha',  # 4 - Beta, 5 - Production/Stable
-    'Programming Language :: Python :: 3.8',
-    'Programming Language :: Python :: 3.9',
     'Programming Language :: Python :: 3.10',
     'Programming Language :: Python :: 3.11',
     'Programming Language :: Python :: 3.12',
+    'Programming Language :: Python :: 3.13',
     'Operating System :: OS Independent',
 
     'Topic :: Scientific/Engineering :: Bio-Informatics',

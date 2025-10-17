@@ -30,6 +30,6 @@ python -m pip install -e .
 ```
 
 ### Widgets
+- Simple masking from meetintg 3
 - Widget demo
 - Plot demo
-- Threading demo

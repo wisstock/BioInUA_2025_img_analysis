@@ -1,10 +1,10 @@
 [project]
-name = "plugin_template"
+name = "plugin-template"
 version = "0.0.1"
 authors = [
   {name = "Borys Olifirov", email = "omnia.faty@gmail.com"}
 ]
-description = "plugin-template: empty napari plugin for Bioinformatics for Ukraine course"
+description = "template of the napari plugin for Bioinformatics for Ukraine course"
 readme = {file = "README.md", content-type = "text/markdown"}
 license = "MIT"
 license-files = ["LICENSE"]
@@ -15,20 +15,19 @@ requires-python = ">= 3.10"
 # залежності, які будуть встановлені разом з пакетом
 dependencies = [
     "napari",
-    "dipy",
-    "numba",
-    "pybaselines"
+    "scikit-image",
+    "matplotlib"
 ]
 
 # класифікатори Python Package Index (PyPI)
 classifiers = [
-    "Framework :: napari",
+    "Framework :: napari",  # це вказувати обо'язково, тоді ваш плагін після публікації на PyPi потрабить на napari-hub
 
-    "Development Status :: 3 - Alpha",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
+    "Development Status :: 3 - Alpha",    # 4 - Beta, 5 - Production/Stable
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Operating System :: OS Independent",
 
     "Topic :: Scientific/Engineering :: Bio-Informatics",

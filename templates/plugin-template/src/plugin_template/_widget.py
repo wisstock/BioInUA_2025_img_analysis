@@ -1,22 +1,44 @@
-import napari
 from napari import Viewer
 from napari.layers import Image, Labels
 from napari.utils.notifications import show_info
-from napari.qt.threading import thread_worker
 
 from magicgui import magic_factory
 
-import os
 import pathlib
 import datetime
 
 import numpy as np
 
-from skimage import data
 from skimage import filters
+from skimage import morphology
 
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_qt5agg import FigureCanvas
+
+
+@magic_factory(call_button='Create Mask')
+def simple_masking_widget(viewer: Viewer, image: Image,
+                          median_filter:int=0, closing:int=3, opening:int=3):
+    image_data = image.data  # збережемо дані в тимчасову змінну
+
+    # виведемо ім'я шару та розмірність зображення
+    show_info(f'Image name: {image.name}')
+    show_info(f'Image shape: {image_data.shape}, dtype: {image_data.dtype}')
+
+    # попередня обробка зображення медіанним фільтром
+    preprocessed_image = filters.median(image_data,
+                                        footprint=morphology.disk(median_filter))
+    # побудова маски за допомогою порогу Отсу
+    otsu_mask = preprocessed_image > filters.threshold_otsu(preprocessed_image)
+    # закриттям маски позбавляємось дрібних прогалин
+    pre_filtered_mask = morphology.closing(otsu_mask,
+                                           footprint=morphology.disk(closing))
+    # відкриттям маски видаляємо дрібні артефакти поза клітиною
+    filtered_mask = morphology.opening(pre_filtered_mask,
+                                       footprint=morphology.disk(opening))
+
+    # додаємо шар Labels з отриманою маскою    
+    viewer.add_labels(filtered_mask, name=f'{image.name}_simple_mask', opacity=0.5)
 
 
 @magic_factory(call_button="Press me",
@@ -55,22 +77,3 @@ def plot_demo(viewer: Viewer,
     ax.set_ylabel('Y')
     ax.set_title('Langmuir adsorption model')
     viewer.window.add_dock_widget(FigureCanvas(mpl_fig), name='Plot')
-
-
-@magic_factory(call_button="Build labels",)
-def threading_demo(viewer: Viewer, classes_num:int=3):
-
-    def _save_img_and_label(img_and_label):
-        img = img_and_label[0]
-        label = img_and_label[1]
-        viewer.add_image(img, name='demo_img', colormap='turbo')
-        viewer.add_labels(label, name='demo_label', opacity=0.75)
-
-    @thread_worker(connect={'yielded':_save_img_and_label})
-    def _threading_demo():
-        img = data.human_mitosis()
-        thresholds = filters.threshold_multiotsu(img, classes=classes_num)
-        labels = np.digitize(img, bins=thresholds)
-        yield (img, labels)
-
-    _threading_demo()   
